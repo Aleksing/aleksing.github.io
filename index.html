@@ -76,6 +76,8 @@
       </div>
        <!-- START THE FEATURETTES -->
       <hr class="featurette-divider">
+	  <div id="results"></div>
+	  <hr class="featurette-divider">
       <!-- /END THE FEATURETTES -->
     </main><!-- /.container -->
     <footer>
@@ -104,7 +106,7 @@
     <div id="results"></div>
     <div class="modal-body">
         <form id="formx" action="javascript:void(null);" onsubmit="call()" method="post" enctype="multipart/form-data" class="form-horizontal" role="form">
-       <input type="hidden" name="tema" value="Заявка на фотографа"> 
+       <input type="hidden" name="tema" value="Заявка AleksingGit"> 
       <div class="row"> 
        <div class="col-md-6 px-2 form-group">
        <input type="text" name="name" class="form-control" placeholder="* Ваше имя * обязательно">
@@ -152,6 +154,7 @@
               data: msg,
               success: function(data) {
                 jQuery('#results').html(data);
+				alert('Заявка получена, спасибо');
               },
               error:  function(xhr, str){
     	    alert('Возникла ошибка: ' + xhr.responseCode);
