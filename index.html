@@ -145,22 +145,5 @@
 </div><!-- Modal -->
 <script src="js/main.js"></script>
 <script>$('#more-nav').moreNav();</script>
-<script>
-     	function call() {
-     	  var msg   = jQuery('#formx').serialize();
-            jQuery.ajax({
-              type: 'POST',
-              url: 'https://webstatys.ru/fotograf/res.php',
-              data: msg,
-              success: function(data) {
-                jQuery('#results').html(data);
-				alert('Заявка получена, спасибо');
-              },
-              error:  function(xhr, str){
-    	    alert('Возникла ошибка: ' + xhr.responseCode);
-              }
-            });
-        }
-</script>
   </body>
 </html>
